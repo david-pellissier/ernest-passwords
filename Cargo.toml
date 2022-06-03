@@ -1,8 +1,22 @@
 [package]
-name = "ernest_password_manager"
+name = "ernest_passwords"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+datetime = "0.5.2"
+regex = "1.5.5"
+read_input = "0.8.6"
+rpassword = "6.0.1"
+# serialization
+base64 = "0.13.0"
+rmp-serde = "1.1.0"
+serde = { version = "1.0.137", features = ["derive"] }
+# cryptoghraphy
+aead = "0.4.3"
+aes-gcm = "0.9.4"
+chacha20poly1305 = "0.10.0-pre" # I usually avoid using pre-release versions, but project doesn't compile with 0.9.1
+pbkdf2 = { version = "0.11", features = ["simple"] } # "simple" feature allows usage of Params
+rand_core = { version = "0.6", features = ["std"] }
+rsa = { version = "0.6.1", features = ["serde"] }
+sha2 = "0.10.2"
